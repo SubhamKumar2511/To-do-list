@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /* background: linear-gradient(130deg, #371aa1,#482cb3 ,#44006d, #843484 ); */
+            background: linear-gradient(135deg,#153677,#4e085f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header h3{
+            text-indent: 5%;
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px 5px;
+
+            border: 1px solid rgb(255, 255, 255);
+            background-color: #efefef;
+            width: 300px;
+            border-radius: 4px;
+        }
+        .task-add{
+            position: relative;
+        }
+        .task-add input{
+            border: 1px solid rgba(210, 210, 210, 0.485) ;
+            /* border: none; */
+            height: 40px;
+            width: 80%;
+            border-radius: 30px;
+            outline: none;
+            text-indent: 5%;
+            font-size: 17px;
+
+        }
+        .task-add button{
+            padding: 10px 25px;
+            position: absolute;
+            right: 1%;
+            top: -1px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: 2px solid crimson;
+            background-color: crimson;
+            color: white;
+        }
+        .tasks{
+            text-indent: 10%;
+            margin: 10px 0;
+            width: 100%;
+        }
+        .tasks .task{
+            font-size: 20px;
+        }
+        .tasks li{
+            padding: 0 0 0 5px;
+            position: relative;
+            font-size: 17px;
+            /* list-style-type: "✅"; */
+            list-style-type: "🔘";
+        }
+        .tasks  .check{
+            list-style-type: "✅";
+            /* text-decoration:line-through; */
+            /* text-decoration-line: line-through; */
+        }
+
+        .tasks li button{
+            position: absolute;
+            right: 0;
+            height: 20px;
+            font-weight: 900;
+            width: 20px;
+            border-radius: 30px;
+            border: 1px solid #8b8b8b;
+            background:transparent;
+            color: rgb(74, 73, 73);
+        }
+        .tasks li  button:active{
+            background-color: black;            
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>To-Do List</h3>
+        </header>
+        <div class="task-add">
+            <input type="text" id="display" name="display">
+            <button id="submit"> Add </button>
+        </div>
+        <div class="tasks">
+        </div>
+    </div>
+
+<script src="todolist.js"></script>
+</body>
+</html>
